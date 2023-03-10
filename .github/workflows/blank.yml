@@ -36,6 +36,7 @@ jobs:
         env:
           GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_CURRENT_REPO: ${{ github.event.repository.name }}
+          GITHUB_OWNER: ${{ github.repository_owner }}
           CURL_VERBOSE: '-v'
         run: |
           source scripts/base.sh
